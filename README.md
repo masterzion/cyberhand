@@ -2,7 +2,7 @@
 
 It moves the cybernetic hand according to the p5 glove.
 
-The source includes the libs:
+The source include the libs:
 
 https://github.com/masterzion/mzstepper
 

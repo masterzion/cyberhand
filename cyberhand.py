@@ -2,7 +2,7 @@
     File name: cyberhand.py
     Author: Jairo Moreno
     Date created: 21/11/2018
-    Date last modified: 24/11/2018
+    Date last modified: 02/12/2018
     Python Version: 3.6
 '''
 import py5glove
@@ -39,9 +39,9 @@ print("3) Open your hand")
 print("4) Press button C on the glove")
 
 while True:
-    obj.GetSample(-1)
+    obj.GetSample(100)
     ar = obj.GetButtons()
-    time.sleep(0.01)
+    time.sleep(0.1)
     print("a")
     if ar[1]:
         break
@@ -51,7 +51,7 @@ time.sleep(2)
 print("== BeginCalibration ==")
 obj.BeginCalibration()
 while True:
-    obj.GetSample(-1)
+    obj.GetSample(100)
     time.sleep(0.1)
     ar = obj.GetButtons()
     if ar[2]:
@@ -60,11 +60,11 @@ obj.EndCalibration()
 
 print("== EndCalibration ==")
 
-time.sleep(2)
+time.sleep(1)
 
 print("== Begin Loop ==")
 while True:
-    obj.GetSample(-1)
+    obj.GetSample(100)
     ar_f_finger = obj.GetFingers()
     for i in range(0, 5):
         arFingerMotor[i].SetPosPercent(int(ar_f_finger[i] * 10)*10)

@@ -14,6 +14,7 @@ import time
 import _thread
 import RPi.GPIO as GPIO
 
+
 SeqDef =  [[1,0,0,1],
            [1,0,0,0],
            [1,1,0,0],
@@ -40,6 +41,10 @@ class Stepper:
             GPIO.setup(pin,GPIO.OUT)
             GPIO.output(pin, False)
         self.thread = _thread.start_new_thread(self.MoveMotor, () )
+
+    def GetThread(self):
+        return self.thread
+
 
 
     def SetPosPercent(self, NewPosPercent):

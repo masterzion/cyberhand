@@ -35,7 +35,7 @@ class Glove:
         self.lib=CDLL('/usr/local/lib/libp5glove.so')
         self.glove = self.lib.p5glove_open(index)
 
-        self.lib.p5glove_sample.argtypes = [c_void_p, POINTER(c_int32)]
+        self.lib.p5glove_sample.argtypes = [c_void_p, c_int]
 
         self.lib.p5glove_get_finger.argtypes = [c_int]
         self.lib.p5glove_get_finger.argtypes = [c_void_p, c_int, POINTER(c_double)]

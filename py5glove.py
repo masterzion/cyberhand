@@ -37,7 +37,6 @@ class Glove:
 
         self.lib.p5glove_sample.argtypes = [c_void_p, c_int]
 
-        self.lib.p5glove_get_finger.argtypes = [c_int]
         self.lib.p5glove_get_finger.argtypes = [c_void_p, c_int, POINTER(c_double)]
 
         self.lib.p5glove_get_position.argtypes = [c_void_p, P5GLOVE_COORD_ARRAY]

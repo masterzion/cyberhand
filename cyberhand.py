@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 '''
     File name: cyberhand.py
     Author: Jairo Moreno
@@ -21,11 +23,11 @@ def AppendStep(StepPins, size):
     return arFingerMotor.append(mzstepper.Stepper(StepPins, 0, size, interval, False, False))
 
 # control motor for each finger
-AppendStep([21,20,16,12], 5000)
+AppendStep([21,20,16,12], 3500)
 AppendStep([5,5,5,5], 0) #waiting for the motor
 AppendStep([5,5,5,5], 0) #waiting for the motor
-AppendStep([5,6,13,19], 5000)
-AppendStep([4,17,27,22], 10000)
+AppendStep([5,6,13,19], 3500)
+AppendStep([4,17,27,22], 5000)
 
 
 

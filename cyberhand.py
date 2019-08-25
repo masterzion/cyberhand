@@ -14,7 +14,6 @@ import time
 
 
 #init vars
-ar_fingers = [0.0, 0.0, 0.0, 0.0, 0.0]
 arFingerMotor = []
 
 #Add mechanical finger object
@@ -75,5 +74,5 @@ while True:
     ar_f_finger = obj.GetFingers()
     print(ar_f_finger)
     for i in range(0, 5):
-        arFingerMotor[i].SetPosPercent(int(ar_f_finger[i] * 10)*10)
+        arFingerMotor[i].SetPosPercent(int(ar_f_finger[i] * 100))
     time.sleep(0.1)

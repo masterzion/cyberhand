@@ -23,8 +23,8 @@ def AppendStep(StepPins, size):
 
 # control motor for each finger
 AppendStep([21,20,16,12], 3500)
-AppendStep([5,5,5,5], 0) #waiting for the motor
-AppendStep([5,5,5,5], 0) #waiting for the motor
+AppendStep([26,26,26,26], 0) # not in use
+AppendStep([26,26,26,26], 0) # not in use
 AppendStep([5,6,13,19], 3500)
 AppendStep([4,17,27,22], 5000)
 
